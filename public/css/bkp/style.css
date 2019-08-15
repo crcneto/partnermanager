@@ -1,0 +1,23 @@
+/*
+* Override Bootstrap
+*/
+
+.mandatory_field{
+    font-weight: bold;
+    color: red;
+}
+
+thead{
+    font-weight: bolder;
+}
+
+.span_adjust{
+    margin-left: 10px !important;
+}
+body{
+    font-family: arial, helvetica;
+}
+
+th{
+    text-align: center;
+}
