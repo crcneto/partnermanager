@@ -2,7 +2,7 @@
     <br>
     <br>
     <br>
-    <span style="font-size: 0.6em;">Copyright&copy; 7º BBM <?= date('Y') ?></span>
+    <span style="font-size: 0.6em;">Copyright&copy; OakSystems <?= date('Y') ?></span>
 </footer>
 <script>
     $(document).ready(function () {

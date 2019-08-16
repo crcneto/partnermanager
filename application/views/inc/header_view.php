@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="br">
     <head>
-        <title>.: CBMSC - SAG :.</title>
+        <title>.: Partner Manager :.</title>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="<?= base_url('public/css/bootstrap.min.css') ?>" />
         <!--Bootstrap Datepicker-->
@@ -10,7 +10,7 @@
             body { padding-bottom: 70px; }
         </style>
         <!--Ícone da aba-->
-        <link rel="shortcut icon" href="<?= base_url('public/img/firefighter.ico') ?>" />
+        <link rel="shortcut icon" href="<?= base_url('public/img/partner.ico') ?>" />
         <!--Seletor com busca-->
         <link rel="stylesheet" href="<?= site_url('public/css/bootstrap-select.min.css') ?>">
         <meta charset="utf-8">
@@ -65,7 +65,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= site_url('home') ?>"><span style=""><img src="<?= site_url("public/img/logo_cbmsc.ico") ?>" height="20" width="20" style="margin-bottom: 6px;"/></span>&nbsp;CBMSC</a>
+                    <a class="navbar-brand" href="<?= site_url('home') ?>"><span style=""><img src="<?= site_url("public/img/partner.ico") ?>" height="20" width="20" style="margin-bottom: 6px;"/></span>&nbsp;Partner Manager</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
