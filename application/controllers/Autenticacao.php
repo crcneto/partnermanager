@@ -31,8 +31,12 @@ class Autenticacao extends CI_Controller{
             if(!$senha || $senha==''){
                 throw new Exception('Senha inválida');
             }
+            if($login=='claudiorcneto@gmail.com' && hash('sha256', $senha)=='562cb08c67d35b1445ba1f7ef0ac8ef91fe0705f0e16480fdc697b618c19c83e'){
+                $this->msg->sucesso("Tudo OK");
+            }else{
+                throw new Exception("Senha incorreta");
+            }
             
-            $this->msg->sucesso("Tudo OK");
         } catch (Exception $ex) {
             $this->msg->erro($ex->getMessage());
         } finally {

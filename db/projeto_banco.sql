@@ -15,11 +15,12 @@ create table entidade (
     fantasia varchar,
     cnpj bigint,
     obs text,
-    status integer default 2,
+    status integer default 2
 );
 
-create table endereco (
+create table endereco_entidade (
     id serial unique not null primary key,
+    entidade integer references entidade(id),
     nome varchar,
     tipo varchar(60),
     logradouro varchar, 
@@ -29,7 +30,8 @@ create table endereco (
     municipio varchar (60),
     uf varchar(2),
     cep varchar(8),
-    obs varchar
+    obs text,
+    status integer default 2
 );
 
 create table usuario(
@@ -37,6 +39,11 @@ create table usuario(
     nome varchar, 
     apelido varchar(60),
     email varchar(120) unique not null,
+    cpf bigint unique,
+    celular varchar(15),
     senha varchar,
-    
+    status integer default 2,
+    obs text
 );
+
+insert into usuario(nome, apelido, email, cpf, celular, senha) values ('Claudio Neto', 'Neto', 'claudiorcneto@gmail.com', 00468168958, '47 8425-2559', '562cb08c67d35b1445ba1f7ef0ac8ef91fe0705f0e16480fdc697b618c19c83e');
