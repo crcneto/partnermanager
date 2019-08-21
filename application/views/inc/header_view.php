@@ -26,7 +26,7 @@
         <script src="<?= base_url('public/js/bootstrap-datepicker.js') ?>"></script>
         <script src="<?= base_url('public/js/bootstrap-datepicker.min.js') ?>"></script>
         <script src="<?= base_url('public/js/locales/bootstrap-datepicker.pt-BR.js') ?>"></script>
-        
+
         <!--Configurações Gerais-->
         <script>
             $(document).ready(function () {
@@ -47,10 +47,10 @@
                 $('.selectpicker').selectpicker();
             });
         </script>
-        
+
         <!--Demais scripts-->
         <script src="<?= base_url('public/js/scripts.js') ?>"></script>
-        
+
         <!--Customização-->
         <link rel="stylesheet" href="<?= base_url('public/css/style.css') ?>" />
     </head>
@@ -79,65 +79,65 @@
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-header text-center">Cadastros</li>
                                     <li role="separator" class="divider"></li>
-                                    <?php if ($this->session->userdata('adm_sistema')>0) { ?>
+                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
                                         <li><a href="<?= site_url('municipio') ?>"><i class="glyphicon glyphicon-map-marker"></i> &nbsp;Município</a></li>
                                     <?php } ?>
-                                    
+
                                     <li><a href="<?= site_url('obm') ?>"><i class="glyphicon glyphicon-home"></i>&nbsp;OBM</a></li>
                                     <li><a href="<?= site_url('obm/estrutura') ?>"><i class="glyphicon glyphicon-home"></i>&nbsp;Estrutura CBMSC</a></li>
-                                    
-                                    <?php if ($this->session->userdata('adm_sistema')>0) { ?>
+
+                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
                                         <li><a href="<?= site_url('usuario') ?>"><i class="glyphicon glyphicon-user"></i>&nbsp;Usuário</a></li>
                                     <?php } ?>
                                     <?php if ($this->access->autorizado('controledeacesso')) { ?>
                                         <li><a href="<?= site_url('acesso') ?>"><i class="glyphicon glyphicon-certificate"></i>&nbsp;Controle de Acesso</a></li>
                                     <?php } ?>
-                                    <?php if ($this->session->userdata('adm_sistema')>0) { ?>
+                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
                                         <li><a href="<?= site_url('setor') ?>"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;Setor</a></li>
                                     <?php } ?>
-                                    <?php if ($this->session->userdata('adm_sistema')>0) { ?>
+                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
                                         <li><a href="<?= site_url('subsetor') ?>"><i class="glyphicon glyphicon-folder-close"></i>&nbsp;Subsetor</a></li>
                                     <?php } ?>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header text-center">Configurações</li>
                                     <li role="separator" class="divider"></li>
-                                    <?php if ($this->session->userdata('adm_sistema')>0) { ?>
+                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
                                         <li><a href="<?= site_url('postograd') ?>"><i class="glyphicon glyphicon-pawn"></i>&nbsp;Posto/Graduação</a></li>
                                     <?php } ?>
-                                    <?php if ($this->session->userdata('adm_sistema')>0) { ?>
+                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
                                         <li><a href="<?= site_url('modulo') ?>"><i class="glyphicon glyphicon-th-large"></i>&nbsp;Módulo</a></li>
                                     <?php } ?>
 
                                 </ul>
                             </li>
-                            
+
                             <?php if ($this->access->autorizado('plano') || $this->access->autorizado('planejamento')) { ?>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-usd"></i>&nbsp;Contábil <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li class=""><a href="<?= site_url('acesso/solicitar')?>"><i class="glyphicon glyphicon-check"></i>&nbsp;Solicitar acesso</a></li>
+                                        <li class=""><a href="<?= site_url('acesso/solicitar') ?>"><i class="glyphicon glyphicon-check"></i>&nbsp;Solicitar acesso</a></li>
                                         <li role="separator" class="divider"></li>
                                         <!--li class="dropdown-header">Planejamento</li-->
                                         <li role="separator" class="divider"></li>                                        
                                         <?php if ($this->access->autorizado('planejamento')) { ?>
-                                            <!--li><a href="<?= site_url('plano') ?>"><i class="glyphicon glyphicon-calendar"></i>&nbsp;Planejamentos em andamento</a></li>
-                                        
-                                            <li><a href="<?= site_url('planejamento/regiao') ?>"><i class="glyphicon glyphicon-screenshot"></i>&nbsp;Planejamentos por região</a></li>
-                                        
-                                            <li><a href="<?= site_url('plano/aprovados') ?>"><i class="glyphicon glyphicon-ok"></i>&nbsp;Planejamentos Aprovados</a></li-->
+                                                    <!--li><a href="<?= site_url('plano') ?>"><i class="glyphicon glyphicon-calendar"></i>&nbsp;Planejamentos em andamento</a></li>
+                                                
+                                                    <li><a href="<?= site_url('planejamento/regiao') ?>"><i class="glyphicon glyphicon-screenshot"></i>&nbsp;Planejamentos por região</a></li>
+                                                
+                                                    <li><a href="<?= site_url('plano/aprovados') ?>"><i class="glyphicon glyphicon-ok"></i>&nbsp;Planejamentos Aprovados</a></li-->
                                             <li><a href="<?= site_url('plano/menu') ?>"><i class="glyphicon glyphicon-hourglass"></i>&nbsp;Planejamento</a></li>
                                             <li><a href="<?= site_url('execucao/menu') ?>"> <i class="glyphicon glyphicon-stats"></i>&nbsp;Execução</a></li>
                                         <?php } ?>
                                         <!--li><a href="#">Relatório por OBM</a></li-->
                                         <li role="separator" class="divider"></li>
-                                        
+
                                         <!--li class="dropdown-header">Fatos Contábeis</li>
                                         <li role="separator" class="divider"></li>
                                         <?php if ($this->access->autorizado('planejamento')) { ?>
-                                        <li class="disabled"><a href="<?= site_url('') ?>"><i class="glyphicon glyphicon-calendar"></i>&nbsp;Fatos Contábeis</a></li>
+                                                <li class="disabled"><a href="<?= site_url('') ?>"><i class="glyphicon glyphicon-calendar"></i>&nbsp;Fatos Contábeis</a></li>
                                         <?php } ?>
                                         <li role="separator" class="divider"></li-->
-                                        
+
                                         <li role="separator" class="divider"></li>
                                         <!--li class="dropdown-header">Movimentação</li>
                                         <li role="separator" class="divider"></li>
@@ -210,7 +210,7 @@
                                     echo $usuario['nome'];
                                     ?>&nbsp;<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?= site_url('usuario/perfil')?>"><i class="glyphicon glyphicon-user" style="color: blue;"></i>&nbsp; Perfil</a></li>
+                                    <li><a href="<?= site_url('usuario/perfil') ?>"><i class="glyphicon glyphicon-user" style="color: blue;"></i>&nbsp; Perfil</a></li>
                                     <li><a href="<?= site_url('tarefa') ?>"><i class="glyphicon glyphicon-tasks" style="color: blue;"></i>&nbsp; Tarefas</a></li>
                                     <li><a href="<?= site_url('usuario/changepass') ?>"><i class="glyphicon glyphicon-edit text-warning"></i>&nbsp;Alterar senha</a></li>
                                     <!--li class="disabled"><a href="#"><i class="glyphicon glyphicon-envelope text-info"></i>&nbsp;Mensageiro</a></li-->
@@ -233,24 +233,18 @@
             <br>
         </div>
         <div class="container">
-
-            <!--Substituir-->
-            <?php if ($this->session->userdata('erro_mensagem') != null && $this->session->userdata('erro_mensagem') != '') { ?>
-
-                <div class="panel panel-danger" style="font-weight: bolder; font-size: 1.5em;">
-                    <div class="panel-heading alert-danger">
-                        <div class="panel-title alert-danger text-center"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;<?php echo $this->session->userdata('erro_mensagem'); ?></div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php if ($this->session->flashdata("erro_mensagem")) { ?>
+                        <div class="alert alert-danger text-center">
+                            <span><?= $this->session->flashdata("erro_mensagem") ?></span>
+                        </div>
+                    <?php } ?>
+                    <?php if ($this->session->flashdata("sucesso_mensagem")) { ?>
+                        <div class="alert alert-success text-center">
+                            <span><?= $this->session->flashdata("sucesso_mensagem") ?></span>
+                        </div>
+                    <?php } ?>
                 </div>
-
-            <?php } ?>
-            <?php if ($this->session->userdata('sucesso_mensagem') != null && $this->session->userdata('sucesso_mensagem') != '') { ?>
-
-                <div class="panel panel-success"  style="/*font-weight: bolder; font-size: 1.5em;*/">
-                    <div class="panel-heading alert-success">
-                        <div class="panel-title alert-success text-center"><?php echo $this->session->userdata('sucesso_mensagem'); ?></div>
-                    </div>
-                </div>
-
-            <?php } ?>
+            </div>
         </div>

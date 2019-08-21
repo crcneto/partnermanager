@@ -10,7 +10,8 @@ class Autenticacao extends CI_Controller{
         try{
             
         } catch (Exception $ex) {
-
+            
+            
         } finally {
             $this->load->view('inc/header_view');
             $this->load->view('autenticacao/index_view');
@@ -30,10 +31,12 @@ class Autenticacao extends CI_Controller{
             if(!$senha || $senha==''){
                 throw new Exception('Senha inválida');
             }
-        } catch (Exception $ex) {
             
+            $this->msg->sucesso("Tudo OK");
+        } catch (Exception $ex) {
+            $this->msg->erro($ex->getMessage());
         } finally {
-            redirect(site_url());
+            redirect(site_url('autenticacao'));
         }
     }
 }
