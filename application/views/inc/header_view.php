@@ -192,10 +192,9 @@
                     </ul>
 
                     <!--Se usuário não estiver autenticado, exibe formulário de login-->
-                    <?php if ($this->session->userdata('autenticado') == null || $this->session->userdata('autenticado') == '') { ?>
+                    <?php if ($this->session->userdata('usuario') == null || $this->session->userdata('usuario') == '') { ?>
 
                         <div class="navbar-form navbar-right">
-                            <a href="<?= site_url('manual') ?>" target="_blank"><i class="glyphicon glyphicon-education text-warning"></i></a>
                             <a href="<?= site_url('autenticacao') ?>" class="btn btn-success">Entrar</a>
                         </div>
 
@@ -211,14 +210,13 @@
                                     ?>&nbsp;<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="<?= site_url('usuario/perfil') ?>"><i class="glyphicon glyphicon-user" style="color: blue;"></i>&nbsp; Perfil</a></li>
-                                    <li><a href="<?= site_url('tarefa') ?>"><i class="glyphicon glyphicon-tasks" style="color: blue;"></i>&nbsp; Tarefas</a></li>
+                                    
                                     <li><a href="<?= site_url('usuario/changepass') ?>"><i class="glyphicon glyphicon-edit text-warning"></i>&nbsp;Alterar senha</a></li>
                                     <!--li class="disabled"><a href="#"><i class="glyphicon glyphicon-envelope text-info"></i>&nbsp;Mensageiro</a></li-->
                                     <li role="separator" class="divider"></li>
                                     <li><a href="<?= site_url('autenticacao/logout') ?>" style="color:red;"><i class="glyphicon glyphicon-log-out"></i>&nbsp;Sair</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="<?= site_url('manual') ?>" target="_blank"><i class="glyphicon glyphicon-education text-warning"></i>&nbsp;Manual</a></li>
-                                    <li><a href="<?= site_url('home/contato') ?>"><i class="glyphicon glyphicon-envelope text-warning"></i>&nbsp;Equipe Técnica</a></li>
+                                    
                                     <li><a href="<?= site_url('sobre') ?>"><i class="glyphicon glyphicon-info-sign text-primary"></i>&nbsp;Sobre</a></li>
                                 </ul>
                             </li>

@@ -18,7 +18,7 @@ class Home extends CI_Controller{
         $toview = [];
         
         try{
-            echo "ok";
+            
         } catch (Exception $ex) {
             
         } finally {

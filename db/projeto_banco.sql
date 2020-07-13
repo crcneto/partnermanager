@@ -46,4 +46,17 @@ create table usuario(
     obs text
 );
 
-insert into usuario(nome, apelido, email, cpf, celular, senha) values ('Claudio Neto', 'Neto', 'claudiorcneto@gmail.com', 00468168958, '47 8425-2559', '562cb08c67d35b1445ba1f7ef0ac8ef91fe0705f0e16480fdc697b618c19c83e');
+insert into usuario(id, nome, apelido, email, cpf, celular, senha) values (1, 'Claudio Neto', 'Neto', 'claudiorcneto@gmail.com', 00468168958, '47 98425-2559', '562cb08c67d35b1445ba1f7ef0ac8ef91fe0705f0e16480fdc697b618c19c83e');
+
+create table sysadmin(
+    id serial unique not null primary key,
+    usuario bigint references usuario(id) not null,
+    status integer not null default 2,
+    operador bigint references usuario (id),
+    ts timestamp default now()
+);
+
+insert into sysadmin (usuario, operador) values (1, 1);
+
+ 
+
