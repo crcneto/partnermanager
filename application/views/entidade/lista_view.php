@@ -20,8 +20,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if (isset($lista) && count($lista) > 0) { ?>
-                        <?php foreach ($lista as $v) { ?>
+                    <?php if (isset($entidades) && count($entidades) > 0) { ?>
+                        <?php foreach ($entidades as $v) { ?>
                             <tr>
                                 <td class="text-center"><?= $v['id'] ?></td>
                                 <td><?= $v['cnpj'] ?></td>
@@ -29,13 +29,15 @@
                                 <td><?= ucwords($v['fantasia']) ?></td>
                                 <td><?= $v['descricao'] ?></td>
                                 <td><?= $v['obs'] ?></td>
-                                <td></td>
+                                <td>
+                                    <button type="button" class="btn btn-xs btn-primary load-modal" title="Editar" data-toggle="modal" data-target=".bs-example-modal-lg" eid="<?=$v['id']?>"><i class="glyphicon glyphicon-edit"></i></button>
+                                </td>
                             </tr>
                         <?php } ?>
                     <?php } ?>
                     <tr>
-                        <?php if (isset($lista)) { ?>
-                            <td colspan="8" class="text-center" style="font-size: 0.7em;">A pesquisa retornou <?= count($lista) ?> resultado(s).</td>
+                        <?php if (isset($entidades)) { ?>
+                            <td colspan="8" class="text-center" style="font-size: 0.7em;">A pesquisa retornou <?= count($entidades) ?> resultado(s).</td>
                         <?php } else { ?>
                             <td colspan="8" class="text-center" style="font-size: 0.7em;">A pesquisa retornou nenhum resultado</td>
                         <?php } ?>
