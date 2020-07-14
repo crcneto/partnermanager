@@ -2,6 +2,11 @@
 
 class Usuario_model extends My_model{
     
+    public function __construct() {
+        parent::__construct();
+        $this->set_tabela("usuario");
+    }
+    
     public function autentica($login){
         $passwd = hash('sha256', $login['senha']);
         $mail = $login['email'];

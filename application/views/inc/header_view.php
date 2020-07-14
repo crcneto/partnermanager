@@ -73,45 +73,22 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="<?= site_url('home') ?>"><i class="glyphicon glyphicon-home"></i>&nbsp;Inicial <span class="sr-only"></span></a></li>
                         <!--li><a href="#">Link</a></li-->
-                        <?php if ($this->session->userdata('autenticado') != NULL) { ?>
+                        <?php if ($this->session->userdata('usuario') != NULL) { ?>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-cog"></i>&nbsp;Configurações <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-header text-center">Cadastros</li>
-                                    <li role="separator" class="divider"></li>
-                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
-                                        <li><a href="<?= site_url('municipio') ?>"><i class="glyphicon glyphicon-map-marker"></i> &nbsp;Município</a></li>
-                                    <?php } ?>
-
-                                    <li><a href="<?= site_url('obm') ?>"><i class="glyphicon glyphicon-home"></i>&nbsp;OBM</a></li>
-                                    <li><a href="<?= site_url('obm/estrutura') ?>"><i class="glyphicon glyphicon-home"></i>&nbsp;Estrutura CBMSC</a></li>
-
-                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
-                                        <li><a href="<?= site_url('usuario') ?>"><i class="glyphicon glyphicon-user"></i>&nbsp;Usuário</a></li>
-                                    <?php } ?>
-                                    <?php if ($this->access->autorizado('controledeacesso')) { ?>
-                                        <li><a href="<?= site_url('acesso') ?>"><i class="glyphicon glyphicon-certificate"></i>&nbsp;Controle de Acesso</a></li>
-                                    <?php } ?>
-                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
-                                        <li><a href="<?= site_url('setor') ?>"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;Setor</a></li>
-                                    <?php } ?>
-                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
-                                        <li><a href="<?= site_url('subsetor') ?>"><i class="glyphicon glyphicon-folder-close"></i>&nbsp;Subsetor</a></li>
+                                    <?php if (true) { ?>
+                                        <li><a href="<?= site_url('entidade/cadastro') ?>"><i class="glyphicon glyphicon-pawn"></i>&nbsp;Cadastro de Entidade</a></li>
                                     <?php } ?>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header text-center">Configurações</li>
                                     <li role="separator" class="divider"></li>
-                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
-                                        <li><a href="<?= site_url('postograd') ?>"><i class="glyphicon glyphicon-pawn"></i>&nbsp;Posto/Graduação</a></li>
-                                    <?php } ?>
-                                    <?php if ($this->session->userdata('adm_sistema') > 0) { ?>
-                                        <li><a href="<?= site_url('modulo') ?>"><i class="glyphicon glyphicon-th-large"></i>&nbsp;Módulo</a></li>
-                                    <?php } ?>
-
+                                    
                                 </ul>
                             </li>
 
-                            <?php if ($this->access->autorizado('plano') || $this->access->autorizado('planejamento')) { ?>
+                            <?php if (FALSE) { ?>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-usd"></i>&nbsp;Contábil <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -133,7 +110,7 @@
 
                                         <!--li class="dropdown-header">Fatos Contábeis</li>
                                         <li role="separator" class="divider"></li>
-                                        <?php if ($this->access->autorizado('planejamento')) { ?>
+                                        <?php if (false) { ?>
                                                 <li class="disabled"><a href="<?= site_url('') ?>"><i class="glyphicon glyphicon-calendar"></i>&nbsp;Fatos Contábeis</a></li>
                                         <?php } ?>
                                         <li role="separator" class="divider"></li-->
@@ -144,7 +121,7 @@
                                         <li><a href="#">Fatos Contábeis</a></li>
                                         <li><a href="#">Relatório por OBM</a></li>
                                         <li role="separator" class="divider"></li-->
-                                        <?php if ($this->session->userdata('bm4')) { ?>
+                                        <?php if (false) { ?>
                                             <li class="dropdown-header">BM-4</li>
                                             <li role="separator" class="divider"></li>
                                             <li><a href="<?= base_url('origemreceita') ?>">Fonte Pagadora</a></li>
